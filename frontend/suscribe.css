@@ -1,0 +1,88 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Basic styling for the entire page */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header styling */
+  header {
+    text-align: center;
+    padding: 40px;
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Main content styling */
+  main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Form styling */
+  .subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .subscribe-form label {
+    font-weight: bold;
+  }
+  
+  .subscribe-form input[type="text"],
+  .subscribe-form input[type="email"],
+  .subscribe-form input[type="tel"],
+  .subscribe-form input[type="date"],
+  .subscribe-form input[type="number"],
+  .subscribe-form select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .subscribe-form p {
+    font-weight: bold;
+  }
+  
+  .subscribe-form #total-price {
+    color: #007bff;
+  }
+  
+  .subscribe-form button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .subscribe-form button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Footer styling */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: #fff;
+  }
+  

@@ -1,0 +1,415 @@
+
+/* Reset default margins and paddings */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: rgb(19,182,151);
+  height: 90px;
+  padding: 0 20px;
+}
+
+.logo {
+  flex: 1;
+}
+
+.logo img {
+  height: 90px; /* Adjust the height as needed */
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center; /* Center the icons vertically */
+  gap: 20px;
+}
+
+.navbar-icons a {
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar-icons img {
+  height: 45px; /* Adjust the height as needed */
+}
+
+/* Sliding ad section */
+.slider-container {
+  max-width: 1100px; /* Adjust the maximum width of the slider container */
+  margin: 20px auto;
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+}
+
+/* Slick Slider dots customization */
+.slick-dots {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.slick-dots li button {
+  border: none;
+  background: #bbb;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.slick-dots li.slick-active button {
+  background: #555;
+}
+
+/* Product listing section styles */
+.product-listing {
+  max-width: 800px; /* Adjust the maximum width of the product listing container */
+  margin: 20px auto;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.product img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.product h3 {
+  margin-bottom: 5px;
+}
+
+.product p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.product span {
+  font-weight: bold;
+}
+
+.product button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product button:hover {
+  background-color: #0056b3;
+}
+/* Additional styles for the "Show All Products" button */
+.show-all-products {
+  text-align: center;
+  margin-top: 30px; /* Adjust the margin as needed to center the button vertically */
+}
+
+.show-all-products button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.show-all-products button:hover {
+  background-color: #0056b3;
+}
+
+/* Stay Hydrated section styles */
+.stay-hydrated-section {
+  max-width: 1200px; /* Adjust the maximum width of the section container */
+  margin: 90px auto;
+}
+
+.stay-hydrated-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.stay-hydrated-section p {
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.stay-hydrated-section ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.stay-hydrated-section ol li {
+  margin-bottom: 5px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #3a3737; /* Dark background color */
+  color: #fff; /* White text color */
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.footer-left img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-center img {
+  width: 100px; /* Adjust the width as needed */
+  height: auto;
+}
+
+.footer-center p {
+  margin: 5px 0;
+}
+
+.footer-center p:last-child {
+  font-weight: bold;
+}
+
+.footer-right {
+  display: flex;
+}
+
+.footer-right a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Reset default margins and paddings */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: rgb(19,182,151);
+  color: #fff;
+  padding: 10px;
+}
+
+.navbar img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 12px;
+}
+
+.navbar a:hover {
+  background-color: #5d52bf;
+  border-radius: 4px;
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Product section styles */
+.product-section {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.product-category {
+  margin-bottom: 40px;
+}
+
+.product-category h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 5px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #3a3737;
+  color: #fff;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-left a,
+.footer-center img {
+  height: 30px;
+}
+
+.footer-center img {
+  margin-bottom: 10px;
+}
+
+.footer-center p {
+  margin: 5px 0;
+}
+
+.footer-center p:last-child {
+  font-weight: bold;
+}
+
+.footer-right a {
+  margin-left: 20px;
+}
+
+.footer-right a:first-child {
+  margin-left: 0;
+}
+.ahsan-magi{
+  margin-left: 150px;
+}
+.imgclass{
+  .imgclass {
+    width: 100px;
+    height: 100px;
+}
+
+}
+.logo-image {
+  width: 200px;
+  height: 200px;
+}
+
+/* Style for the Subscribe section */
+.subscribe-section {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f5f5f5;
+}
+
+.subscribe-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.subscribe-section p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Style for the Subscribe button */
+.subscribe-button {
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #25d63d;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.subscribe-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product img{
+    height: 160px;
+    width: 120px;
+  }
+  #fanta img {
+    height: 200px;
+    width: 200px;
+  }
+  #dew img {
+    height: 200px;
+    width: 60px;
+  }
+  #coke img {
+    height: 200px;
+    width: 90px;
+  }
+  #can_7up img {
+    height: 200px;
+    width: 150px;
+  }
+  #sprite img {
+    height: 200px;
+    width: 70px;
+
+  }
+  #up img{
+    height: 200px;
+    width: 150px;
+  }
