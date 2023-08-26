@@ -58,56 +58,6 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol {
     margin-right: 10px;
   }
   
-  /* Cart Summary */
-  .card.cart-summery {
-    background-color: #fff;
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    margin-top: 20px;
-  }
-  
-  .sub-title {
-    background-color: #f5f5f5;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-  
-  .cart-summery .d-flex {
-    justify-content: space-between;
-    padding: 5px 0;
-    font-size: 14px;
-  }
-  
-  .summery-end {
-    margin-top: 15px;
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-    font-weight: bold;
-  }
-  
-  /* Apply Coupon */
-  .apply-coupan {
-    margin-top: 20px;
-  }
-  
-  .apply-coupan input[type="text"] {
-    width: 70%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-  }
-  
-  .apply-coupan button {
-    border: none;
-    background-color: #333;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-  }
-  
   /* Button Styles */
   .btn {
     padding: 10px 20px;
@@ -156,4 +106,77 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol {
       width: 60%;
     }
   }
-  
+  /* Add this CSS code to your existing stylesheet or in a <style> tag in your HTML */
+
+/* Styling for the cart summary and coupon section */
+.cart-summary {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sub-title {
+  margin-bottom: 15px;
+}
+
+.sub-title h2 {
+  background-color: #fff;
+  padding: 5px 10px;
+  display: inline-block;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.cart-summary .d-flex {
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-summary .d-flex:last-child {
+  border-bottom: none;
+}
+
+.apply-coupon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.apply-coupon .form-control {
+  flex: 1;
+  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.apply-coupon .btn-dark {
+  padding: 8px 15px;
+  border-radius: 4px;
+}
+
+/* Styling for the Proceed to Checkout button */
+.pt-5 .btn-dark {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pt-5 .btn-dark:hover {
+  background-color: #222;
+}
