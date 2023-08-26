@@ -1,16 +1,36 @@
+<?php
+// Database configuration
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = 'watersupplyphp';
+
+// Create a database connection
+$conn = new mysqli($host, $username, $password, $database);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch data from the database
+$sql = "SELECT * FROM contacts";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title> </title>
+		<title>AQUA DROPS :: Administrative Panel</title>
 		<!-- Google Font: Source Sans Pro -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 		<!-- Font Awesome -->
-		<link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+		<link rel="stylesheet" href="frontend/plugins/fontawesome-free/css/all.min.css">
 		<!-- Theme style -->
-        <link rel="stylesheet" href="{{ url('frontend/css/adminlte.min.css')}}">
-		<link rel="stylesheet" href="{{ url('frontend/css/custom.css')}}">
+		<link rel="stylesheet" href="frontend/css/adminlte.min.css">
+		<link rel="stylesheet" href="frontend/css/custom.css">
+		
 	</head>
 	<body class="hold-transition sidebar-mini">
 		<!-- Site wrapper -->
@@ -21,14 +41,14 @@
 				<ul class="navbar-nav">
 					<li class="nav-item">
 					  	<a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-					</li>
+					</li>					
 				</ul>
 				<div class="navbar-nav pl-2">
 					<!-- <ol class="breadcrumb p-0 m-0 bg-white">
 						<li class="breadcrumb-item active">Dashboard</li>
 					</ol> -->
 				</div>
-
+				
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
 						<a class="nav-link" data-widget="fullscreen" href="#" role="button">
@@ -37,24 +57,24 @@
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link p-0 pr-3" data-toggle="dropdown" href="#">
-							<img src="{{ asset('frontend/img/avatar5.png')}}" class='img-circle elevation-2' width="40" height="40" alt="">
+							<img src="frontend/img/avatar5.png" class='img-circle elevation-2' width="40" height="40" alt="">
 						</a>
 						<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right p-3">
-							<h4 class="h4 mb-0"><strong>ADMIN</strong></h4>
-							<div class="mb-3">example@example.com</div>
+							<h4 class="h4 mb-0"><strong>Tanmoy Bhwomick</strong></h4>
+							<div class="mb-3">admin@egmail.com</div>
 							<div class="dropdown-divider"></div>
 							<a href="#" class="dropdown-item">
-								<i class="fas fa-user-cog mr-2"></i> Settings
+								<i class="fas fa-user-cog mr-2"></i> Settings								
 							</a>
 							<div class="dropdown-divider"></div>
 							<a href="#" class="dropdown-item">
 								<i class="fas fa-lock mr-2"></i> Change Password
 							</a>
 							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item text-danger">
-								<i class="fas fa-sign-out-alt mr-2"></i> Logout
+							<a href="#" class="dropdown-item text-danger" id="logout-button">
+    						<i class="fas fa-sign-out-alt mr-2"></i> Logout
 							</a>
-						</div>
+
 					</li>
 				</ul>
 			</nav>
@@ -63,7 +83,7 @@
 			<aside class="main-sidebar sidebar-dark-primary elevation-4">
 				<!-- Brand Logo -->
 				<a href="#" class="brand-link">
-					<img src="{{ asset('frontend/img/AdminLTELogo.png')}}" alt="" class="brand-image img-circle elevation-3" style="opacity: .8">
+					<img src="frontend/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
 					<span class="brand-text font-weight-light">AQUA DROPS</span>
 				</a>
 				<!-- Sidebar -->
@@ -76,8 +96,8 @@
 							<li class="nav-item">
 								<a href="dashboard.html" class="nav-link">
 									<i class="nav-icon fas fa-tachometer-alt"></i>
-									<p>Dashboard</p>
-								</a>
+									<p> Admin Dashboard</p>
+								</a>																
 							</li>
 							<li class="nav-item">
 								<a href="categories.html" class="nav-link">
@@ -105,14 +125,14 @@
 									<p>Products</p>
 								</a>
 							</li>
-
+							
 							<li class="nav-item">
 								<a href="#" class="nav-link">
 									<!-- <i class="nav-icon fas fa-tag"></i> -->
 									<i class="fas fa-truck nav-icon"></i>
 									<p>Shipping</p>
 								</a>
-							</li>
+							</li>							
 							<li class="nav-item">
 								<a href="orders.html" class="nav-link">
 									<i class="nav-icon fas fa-shopping-bag"></i>
@@ -136,7 +156,7 @@
 									<i class="nav-icon  far fa-file-alt"></i>
 									<p>Pages</p>
 								</a>
-							</li>
+							</li>							
 						</ul>
 					</nav>
 					<!-- /.sidebar-menu -->
@@ -146,14 +166,14 @@
 			<!-- Content Wrapper. Contains page content -->
 			<div class="content-wrapper">
 				<!-- Content Header (Page header) -->
-				<section class="content-header">
+				<section class="content-header">					
 					<div class="container-fluid">
 						<div class="row mb-2">
 							<div class="col-sm-6">
 								<h1>Dashboard</h1>
 							</div>
 							<div class="col-sm-6">
-
+								
 							</div>
 						</div>
 					</div>
@@ -164,7 +184,7 @@
 					<!-- Default box -->
 					<div class="container-fluid">
 						<div class="row">
-							<div class="col-lg-4 col-6">
+							<div class="col-lg-4 col-6">							
 								<div class="small-box card">
 									<div class="inner">
 										<h3>150</h3>
@@ -176,8 +196,8 @@
 									<a href="#" class="small-box-footer text-dark">More info <i class="fas fa-arrow-circle-right"></i></a>
 								</div>
 							</div>
-
-							<div class="col-lg-4 col-6">
+							
+							<div class="col-lg-4 col-6">							
 								<div class="small-box card">
 									<div class="inner">
 										<h3>50</h3>
@@ -189,8 +209,8 @@
 									<a href="#" class="small-box-footer text-dark">More info <i class="fas fa-arrow-circle-right"></i></a>
 								</div>
 							</div>
-
-							<div class="col-lg-4 col-6">
+							
+							<div class="col-lg-4 col-6">							
 								<div class="small-box card">
 									<div class="inner">
 										<h3>$1000</h3>
@@ -203,27 +223,33 @@
 								</div>
 							</div>
 						</div>
-					</div>
-					<!-- /.card -->
-				</section>
-                   <!-- Display Form Details -->
-    <section class="content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Form Details</h2>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Message</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                        </tbody>
-                    </table>
+					</div>					
+					
+					<div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Message</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo '<tr>';
+                                        echo '<td>' . $row["name"] . '</td>';
+                                        echo '<td>' . $row["email"] . '</td>';
+                                        echo '<td>' . $row["message"] . '</td>';
+                                        echo '<td><a href="delete_contact.php?id=' . $row["id"] . '">Delete</a></td>';
+                                        echo '</tr>';
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -232,18 +258,26 @@
 			</div>
 			<!-- /.content-wrapper -->
 			<footer class="main-footer">
-
+				
 				<strong>Copyright &copy; 2014-2022 AmazingShop All rights reserved.
 			</footer>
-
+			
 		</div>
-	<!-- ./wrapper -->
-<!-- jQuery -->
-<script src="{{ asset('frontend/plugins/jquery/jquery.min.js') }}"></script>
-<!-- Bootstrap 4 -->
-<script src="{{ asset('frontend/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<!-- AdminLTE App -->
-<script src="{{ asset('frontend/js/adminlte.min.js') }}"></script>
+		<!-- ./wrapper -->
+		<!-- jQuery -->
+		<script src="frontend/plugins/jquery/jquery.min.js"></script>
+		<!-- Bootstrap 4 -->
+		<script src="frontend/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<!-- AdminLTE App -->
+		<script src="frontend/js/adminlte.min.js"></script>
+		<!-- AdminLTE for demo purposes -->
+		<script src="frontend/js/demo.js"></script>
+		<script>
+document.getElementById('logout-button').addEventListener('click', function() {
+    // Redirect to the logout page
+    window.location.href = 'logout.php'; // Change 'logout.php' to the actual path of your logout script
+});
+</script>
 
 	</body>
 </html>

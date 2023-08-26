@@ -1,0 +1,60 @@
+/* Add this CSS code to your custom.css file or your HTML <style> tag */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-5 {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.section-10 {
+    padding: 40px 0;
+}
+
+.breadcrumb {
+    background: transparent;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.btn-dark {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #272b30;
+}
+
+.forgot-link {
+    color: #777;
+}
+
+.forgot-link:hover {
+    color: #333;
+    text-decoration: none;
+}

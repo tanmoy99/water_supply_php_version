@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Subscribe Page</title>
-  <link rel="stylesheet" href="{{ url('frontend/suscribe.css') }}">
+  <link rel="stylesheet" href="frontend/suscribe.css">
 </head>
 <body>
   <header>

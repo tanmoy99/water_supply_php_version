@@ -1,4 +1,13 @@
+<?php
+session_start();
+$userLoggedIn = false; // Assume user is not logged in by default
 
+// Check if the user is logged in
+if (isset($_SESSION['user_id'])) {
+    $userLoggedIn = true;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,15 +23,19 @@
 <body>
   <header class="navbar">
     <div class="logo">
-      <a href="http://localhost/demophp/index.php"><img src="frontend/img/download.jfif" alt="Company Logo" style="width: 90px; height: 100px;">
+      <a href="http://localhost/water_supply_php_version/index.php"><img src="frontend/img/download.jfif" alt="Company Logo" style="width: 90px; height: 100px;">
       </a>
     </div>
     <nav class="navbar-icons">
-      <a href="#"><img src="frontend/img/grocery-store.png" alt="Cart">Cart</a>
-      <a href="#"><img src="frontend/img/avatar.png" alt="Login">LogIn</a>
-      <a href="http://localhost/demophp/products.php"><img src="frontend/img/product.png" alt="Products">Products</a>
-      <a href="http://localhost/demophp/aboutUs.php"><img src="frontend/img/contact-us.png" alt="Products">ABOUT US</a>
-    </nav>
+    <?php if ($userLoggedIn) : ?>
+        <a href="http://localhost/water_supply_php_version/cart.php"><img src="frontend/img/grocery-store.png" alt="Cart">Cart</a>
+        <a href="http://localhost/water_supply_php_version/userDashboard.php"><img src="frontend/img/avatar.png" alt="Dashboard">Dashboard</a>
+    <?php else : ?>
+        <a href="http://localhost/water_supply_php_version/login.php"><img src="frontend/img/avatar.png" alt="Login">LogIn</a>
+    <?php endif; ?>
+    <a href="http://localhost/water_supply_php_version/products.php"><img src="frontend/img/product.png" alt="Products">Products</a>
+    <a href="http://localhost/water_supply_php_version/aboutUs.php"><img src="frontend/img/contact-us.png" alt="Products">ABOUT US</a>
+</nav>
   </header>
 
   <section class="slider-container">
@@ -39,7 +52,7 @@
   <section class="subscribe-section">
     <h2>Subscribe With Us</h2>
     <p>Stay Hydrated!</p>
-    <a href="http://localhost/demophp/subscribe.php" class="subscribe-button">Subscribe</a>
+    <a href="http://localhost/water_supply_php_version/subscribe.php" class="subscribe-button">Subscribe</a>
 </section>
 
 
