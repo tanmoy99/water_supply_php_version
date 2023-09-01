@@ -11,7 +11,7 @@ if (isset($_SESSION['user_id'])) {
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = 'watersupplyphp';
+$database = 'php_water_supply';
 
 $connection = new mysqli($host, $username, $password, $database);
 
@@ -35,17 +35,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $user = $result->fetch_assoc();
 
     if ($user && password_verify($password, $user['password'])) {
-        if ($email === "admin@gmail.com") { // Check if the user is an admin
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['user_name'] = $user['name'];
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['user_name'] = $user['name'];
+        $_SESSION['user_email'] = $user['email']; // Set user email here
+
+        if ($email === "admin@gmail.com") {
             header("Location: adminLogin.php"); // Change this to your admin dashboard page
-            exit();
         } else {
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['user_name'] = $user['name'];
-            header("Location: userDashboard.php"); // Change this to your user dashboard page
-            exit();
+            header("Location: products.php"); // Change this to your user dashboard page
         }
+        exit();
     } else {
         // Invalid login
         $error_message = "Invalid email or password.";

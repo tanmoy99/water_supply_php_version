@@ -3,7 +3,7 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = 'watersupplyphp';
+$database = 'php_water_supply';
 
 $connection = new mysqli($host, $username, $password, $database);
 
